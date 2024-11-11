@@ -1,0 +1,57 @@
+/*************************************************************
+*
+* ボタン
+*
+*************************************************************/
+/*************************************************************
+* 共通スタイル
+*************************************************************/
+[class*=" btn"],
+[class^="btn"] {
+  appearance:none;
+  display:block;
+  width: 100%;
+
+  transition: $anim-duration $anim-function;
+
+  &[href] {
+    cursor: pointer;
+  }
+
+  /* インラインボタン */
+  &.__inline {
+    display: inline-block;
+  }
+
+  /* 幅を自動 */
+  &.__inline.__width_auto {
+    width: auto;
+    max-width: inherit;
+  }
+
+  /* 禁止ボタン */
+  &.__disabled {
+    pointer-events: none;
+    filter: grayscale(100%);
+    opacity: 0.8;
+
+    color: #ababab;
+  }
+
+  /* 右寄せ */
+  &.__mright {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  /* 幅を100%にする */
+  &.__max_width {
+    max-width: inherit;
+  }
+}
+
+/* 中央配置 */
+%btn-mauto {
+  margin-left: auto;
+  margin-right: auto;
+}

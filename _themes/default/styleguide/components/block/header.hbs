@@ -1,0 +1,61 @@
+<header id="header" class="header">
+  <div class="content_page">
+    <div class="inner">
+      <div class="left">
+        <h1 class="logo">
+          <a href="#" class="hover_alpha">
+            <img src="{{ path '/assets/img/common/logo01.png'}}" alt="">
+          </a>
+        </h1>
+        <button type="button" aria-label="ナビゲーションメニュー" class="nav_toggle" id="nav_toggle"><span class="bd"></span></button>
+      </div>
+      <div class="right">
+        <nav class="nav_gb" id="nav_gb">
+          <div class="ninner">
+            <ul class="list">
+              <li class="litem">
+                <a href="#">サービス一覧 <span class="htext">Service</span> </a>
+              </li>
+              <li class="litem">
+                <a href="#">ニュース＆イベント <span class="htext">News&amp;Events</span> </a>
+              </li>
+              <li class="litem">
+                <a href="#">事例紹介 <span class="htext">Works</span> </a>
+              </li>
+              <li class="litem">
+                <a href="#">お客様の声 <span class="htext">Voice</span> </a>
+              </li>
+              <li class="litem">
+                <a href="#">私たちの考え <span class="htext">Idea</span> </a>
+              </li>
+              <li class="litem">
+                <a href="#">企業情報 <span class="htext">Company</span> </a>
+              </li>
+              <li class="litem">
+                <a href="#">採用情報 <span class="htext">Recruit</span> </a>
+              </li>
+              <li class="litem">
+                <a href="#">お問い合わせ <span class="htext">Contact</span> </a>
+              </li>
+            </ul>
+            <div class="detail">
+              <div class="info">
+                <div class="address">
+                  {{> @dlist01}}
+                  {{> @dlist01}}
+                </div>
+                <ul class="links">
+                  <li class="litem fb">
+                    <a href="#" target="_blank" class="hover_alpha">
+                      <img src="{{ path '/assets/svg/facebook.svg' }}" alt="">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

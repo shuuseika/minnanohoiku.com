@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/*************************************************************
+*
+* 変数
+*
+*************************************************************/
+// Container
+$container-width: 1740px;
+$container-width-small: 1240px;
+$container-width-minus1: $container-width - 1px;
+
+// メディアクエリ
+$breakpoints: (
+  'pc-min': 'screen and (min-width: #{$container-width})',
+  'lp-between': 'screen and (max-width: #{$container-width-minus1}) and (min-width: 769px)',
+  'lp-min': 'screen and (min-width: 769px)',
+  'lp': 'screen and (max-width: #{$container-width-minus1})',
+  'tb': 'screen and (max-width: 768px)',
+  'tb-min': 'screen and (min-width: 600px)',
+  'sp': 'screen and (max-width: 599px)'
+) !default;
+
+// メディアクエリのミックスイン
+@mixin media-query($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// Margin
+$margin-gigantic: 6.25rem;
+$margin-huge:     5rem;
+$margin-large:    3.125rem;
+$margin-medium:   2.5rem;
+$margin-small:    1.875rem;
+$margin-tiny:     1rem;
+$margin-micro:    0.812rem;
+
+// Gutters
+$gutters-page-pc: 30px;
+$gutters-page-tb: 6%;
+$gutters-page-sp: 5%;
+
+$gutters-type1:   1.428571428571429%;
+
+// Font
+$font-family:       'Noto Sans JP', "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Hiragino Sans, "游ゴシック", YuGothic, Verdana, "メイリオ", Meiryo, sans-serif;
+$font-english: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-size-pc:      16px;
+$font-size-tb:      14px;
+$font-size-sp:      14px;
+$font-weight-medium: 500;
+$font-weight-regular: 300;
+$font-weight-bold: 700;
+$line-height-headline: 1.65;
+$line-height:       2.1;
+$line-height-sp: 1.8;
+$letter-spacing:    normal;
+
+// Colorm
+$color-primary:   #D90D0D;
+$color-secondary: #122726;
+$color-base: #EEF3F7;
+$color-text:      #262626;
+$color-border1: #AAAAAA;
+
+// Animation
+$anim-duration:     200ms;
+$anim-load:     1000ms;
+$anim-function:     cubic-bezier(0.000, 0.000, 0.580, 1.000);
+
+%animation {
+  transition: $anim-load $anim-function;
+  transition-property: opacity, transform;
+}

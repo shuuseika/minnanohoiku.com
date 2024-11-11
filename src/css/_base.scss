@@ -1,0 +1,177 @@
+/* ノーマライズ */
+@import 'normalize';
+/* アウラノーマライズ */
+@import 'aur_normalize';
+/************************************************
+ * デザインパーツ 
+ ***********************************************/
+ /* グリッド */
+@import 'parts/grid';
+/* フォント・タイポグラフィ */
+@import "parts/typography";
+/* アンカー */
+@import 'parts/anchor';
+/* 見出し */
+@import 'parts/headline';
+/* ボタン */
+@import 'parts/button';
+/* ボックス（カード型） */
+@import 'parts/box';
+/* リスト */
+@import 'parts/list';
+/* テーブル */
+@import 'parts/table';
+
+/*************************************************************
+* 要素の回り込み解除
+*************************************************************/
+.sc {clear:both;}
+
+/*************************************************************
+* クリアフィックス
+*************************************************************/
+.cf {
+  zoom:1;
+
+  &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+/*************************************************************
+* その他
+*************************************************************/
+/* block */
+.block { display: block; }
+
+/* relative */
+.relative { position: relative; }
+
+/* 要素を天地中央 */
+.absolute_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+/* objfit */
+img.objfit {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  font-family: 'object-fit: cover;object-position: center;';
+}
+
+/*************************************************************
+*
+* デバイス毎の処理用
+*
+*************************************************************/
+/* PCサイズ以上 */
+@include media-query(pc-min) {
+  .over_pc_none {display: none;}
+}
+/* ノートPCサイズ以上 */
+@include media-query(lp-min) {
+  .over_lp_none { display: none;}
+}
+/* タブレットサイズ以上 */
+@include media-query(tb-min) {
+  .over_tb_none {display: none;}
+}
+/* ノートPCサイズ以下 */
+@include media-query(lp) {
+  .under_lp_none {display: none;}
+}
+/* タブレットサイズ以下 */
+@include media-query(tb) {
+  .under_tb_none { display: none;}
+}
+/* スマホサイズ以下 */
+@include media-query(sp){
+  .under_sp_none {display: none;}
+}
+
+/*************************************************************
+*
+* ブラウザ更新
+*
+*************************************************************/
+.bg_browser_update {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.8);
+}
+.box_browser_update {
+  position: fixed;
+  z-index: 2000;
+  top: 50%;
+  left: 50%;
+  width: 500px !important;
+
+  transform: translate(-50%, -50%);
+
+  padding: 25px;
+
+  background-color: #fff;
+
+  text-align: center;
+
+  .headline {
+    font-size: 1.2em;
+    color: $color-primary;
+
+    margin-bottom: 1.25rem;
+
+    .subtext {
+      display: block;
+
+      color: #999;
+      font-size: 0.75em;
+      font-weight: normal;
+    }
+  }
+  .paragraph {
+    text-align: justify;
+    text-align-last: left;
+    font-size: 0.875em;
+
+    margin-bottom: 1.25rem;
+  }
+  .btn_requirement {
+    display: block;
+    
+    background-color: $color-primary;
+
+    color: #fff;
+  }
+}
+/*************************************************************
+*
+* アウラロゴ
+*
+*************************************************************/
+#logo_aura {
+  position: absolute;
+  bottom:1%;
+  right: $gutters-page-pc;
+  width: 70px;
+  opacity: 0.4;
+  @include media-query(sp) {
+    & {
+      right: $gutters-page-sp;
+    }
+  }
+}

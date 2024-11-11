@@ -1,0 +1,30 @@
+# sublime text3
+*.sublime-project
+# VS Code
+*.code-workspace
+
+# ログ生成ディレクトリを無視
+log/
+!aur_lib/Log
+
+#「セッション情報保存」ディレクトリを無視
+sess/
+
+#node
+node_modules/
+*.lock
+dist/
+
+# css
+/css/parts
+_themes/**/css/parts/
+!_themes/**/src/css/parts/
+_themes/**/css/block/
+!_themes/**/src/css/block/
+*.css.map
+
+#ファイルアップロード
+uploaddata
+
+#composer 
+vendor/

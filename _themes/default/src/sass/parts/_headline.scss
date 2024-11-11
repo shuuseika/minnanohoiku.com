@@ -1,0 +1,103 @@
+/*************************************************************
+*
+* 見出し
+*
+*************************************************************/
+/*************************************
+* 見出し1
+*************************************/
+.headline1 {
+  position: relative;
+
+  padding-bottom: 125px;
+
+  font-weight: $font-weight-bold;
+  text-align: center;
+  font-size: 2em;
+  line-height: $line-height-headline;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    background-color: $color-text;
+    height: 75px;
+    width: 4px;
+  }
+
+  // Vari1
+  &--vari1 {
+    @extend .headline1;
+
+    padding-top: 70px;
+  }
+  &--vari1 &__subtext {
+    font-size: 110px;
+    color: #eee;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-family: $font-english;
+
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0;
+  }
+
+  // Vari2
+  &--vari2 {
+    @extend .headline1;
+    font-size: 2.375em;
+  }
+  @include media-query(tb) {
+    // Vari2
+    &--vari2 {
+      font-size: 2em;
+    }
+  }
+  @include media-query(sp) {
+    padding-bottom: 5px;
+
+    font-size: 1.602em;
+    text-align: left;
+
+    &:after {
+      width: 100px;
+      height: 3px;
+
+      right: auto;
+
+      background-color: $color-primary;
+    }
+     // Vari2
+    &--vari2 {
+      text-align: center;
+      font-size: 1.3em;
+
+      &:after { content: none; }
+    }
+
+    // Vari1
+    &--vari1 {
+      padding-top: 20px;
+    }
+    &--vari1 &__subtext {
+      font-size: 40px;
+      text-align: left;
+
+      position: static;
+    }
+  }
+}
+
+@include media-query(lp) {
+}
+@include media-query(tb) {
+}
+@include media-query(sp) {
+}

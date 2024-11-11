@@ -1,0 +1,88 @@
+/**************************************************************
+*
+* ヘッダー
+*
+**************************************************************/
+
+/**************************************************************
+* ハンバーガーメニュー
+**************************************************************/
+.nav_toggle {
+  display: none;
+  position: fixed;
+  z-index: 15;
+  top: 15px;
+  right: $gutters-page-pc;
+  padding: 0;
+  height: 55px;
+  width: 55px;
+
+  border: 2px solid $color-primary;
+  border-radius: 3px;
+
+  .bd,
+  .bd:after,
+  .bd:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70%;
+    height: 2px;
+
+    background-color: $color-primary;
+
+    transition: $anim-duration $anim-function;
+    transition-property: opacity, transform;
+  }
+
+  .bd {
+    &:before,
+    &:after {
+      content: "";
+      width: 100%;
+    }
+    &:before {
+      transform: translateY(10px);
+    }
+    &:after {
+      transform: translateY(-10px);
+    }
+  }
+
+  &.active {
+    .bd {
+      transform: rotate(45deg);
+
+      &:before {
+        transform: rotate(90deg);
+      }
+      &:after {
+        transform: translateY(0px);
+        opacity: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 979px) {
+    & {
+      display: block;
+    }
+  }
+  @include media-query(sp) {
+    right: $gutters-page-sp;
+
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@include media-query(lp) {
+}
+@include media-query(tb) {
+}
+@include media-query(sp) {
+}

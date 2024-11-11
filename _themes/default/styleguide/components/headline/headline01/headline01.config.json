@@ -1,0 +1,14 @@
+{
+  "title": "headline01",
+  "context": {
+    "modifier": "headline1"
+  },
+  "variants": [
+    {
+      "name": "vari2",
+      "context": {
+        "modifier": "headline1--vari2"
+      }
+    }
+  ]
+}

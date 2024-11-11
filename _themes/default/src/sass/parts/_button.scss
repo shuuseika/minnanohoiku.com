@@ -1,0 +1,153 @@
+/*************************************************************
+*
+* ボタン
+*
+*************************************************************/
+/*************************************************************
+* テーマ用共通スタイル
+*************************************************************/
+[class*=" btn"],
+[class^="btn"] {
+  /* 小サイズ */
+  &.__small {
+    max-width: 130px;
+
+    padding: 0.493em 1em;
+
+    font-size: 0.79em;
+  }
+}
+
+/*************************************
+* btn1
+*************************************/
+.btn1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+  max-width: 300px;
+  height: 74px;
+
+  background-color: $color-primary;
+  border-radius: 37px;
+  box-shadow:0px 3px 5px 0px #aaa;
+
+  text-align: center;
+  font-size: 1.437em;
+  color: #fff;
+  font-weight: $font-weight-medium;
+
+  &__small {
+    font-size: 0.695em;
+    font-weight: $font-weight-regular;
+
+    width: auto;
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 2rem;
+    width: 1em;
+    height: 0.7em;
+    margin: auto;
+
+    font-size: 0.35em;
+  }
+
+  &--mauto {
+    @extend .btn1;
+    @extend %btn-mauto;
+  }
+
+  &--mainimage {
+    @extend .btn1;
+    margin-left: auto;
+    margin-right: 0;
+
+    @media screen and (max-width: 979px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  transition: $anim-duration $anim-function;
+  transition-property: transform, box-shadow, background-color;
+
+  .hover &:hover,
+  &.hover {
+    transform: translateY(3px);
+    box-shadow:0px 3px 5px 0px transparent;
+
+    background-color: lighten($color-primary, 8%);
+  }
+  @include media-query(sp) {
+    height: 60px;
+  }
+}
+
+/*************************************
+* btn2
+*************************************/
+.btn2 {
+  width: 100%;
+  max-width: 260px;
+
+  background-color: $color-primary;
+  border-radius: 5px;
+  box-shadow:0px 3px 5px 0px #aaa;
+
+  color: #fff;
+  text-align: center;
+  font-size: 1.25em;
+
+  padding: 1.125rem;
+
+  transition: $anim-duration $anim-function;
+  transition-property: transform, box-shadow, background-color;
+
+  .hover &:hover,
+  &.hover {
+    transform: translateY(3px);
+    box-shadow:0px 3px 5px 0px transparent;
+
+    background-color: lighten($color-primary, 8%);
+  }
+
+  &--mauto {
+    @extend .btn2;
+    @extend %btn-mauto;
+  }
+}
+/*************************************
+* btn3
+*************************************/
+.btn3 {
+  width: 150px;
+
+  background-color: #fff;
+  border: 2px solid $color-primary;
+  border-radius: 5px;
+
+  font-size: 1.125em;
+  text-align: center;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+
+  padding: 0.875rem;
+
+  transition-property: background-color, color;
+
+  .hover &:hover,
+  &.hover {
+    background-color: $color-primary;
+    color: #fff;
+  }
+}
+@include media-query(lp) {
+}
+@include media-query(tb) {
+}
+@include media-query(sp) {
+}

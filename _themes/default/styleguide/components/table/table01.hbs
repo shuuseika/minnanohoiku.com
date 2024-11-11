@@ -1,0 +1,57 @@
+<table class="table1">
+  <tr>
+    <th class="table1__thead">
+      会社名
+      <span class="asterisk">必須</span>
+    </th>
+    <td class="table1__titem">
+      {{> @text}}
+    </td>
+  </tr>
+  <tr>
+    <th class="table1__thead">
+      ご担当社名
+      <span class="asterisk">必須</span>
+    </th>
+    <td class="table1__titem">
+      {{> @text}}
+    </td>
+  </tr>
+  <tr>
+    <th class="table1__thead">
+      メールアドレス
+      <span class="asterisk">必須</span>
+    </th>
+    <td class="table1__titem">
+      {{> @text}}
+    </td>
+  </tr>
+  <tr>
+    <th class="table1__thead">
+      電話番号
+      <span class="asterisk">必須</span>
+    </th>
+    <td class="table1__titem">
+      {{> @text}}
+    </td>
+  </tr>
+  <tr>
+    <th class="table1__thead">
+      お問い合わせ内容
+    </th>
+    <td class="table1__titem">
+      {{> @textarea}}
+    </td>
+  </tr>
+  <tr>
+    <th class="table1__thead">
+      個人情報の取り扱い
+    </th>
+    <td class="table1__titem">
+      {{> @checkbox}}
+      <span class="table1__subtext">
+        「<a href="#" class="anchor1">個人情報保護方針</a>」と「<a href="#" class="anchor1">サイトポリシー</a>」を送信前にご確認ください。
+      </span>
+    </td>
+  </tr>
+</table>

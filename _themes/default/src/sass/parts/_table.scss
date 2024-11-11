@@ -1,0 +1,98 @@
+/**************************************************************
+*
+* テーブル
+*
+**************************************************************/
+/*************************************
+* テーブルコンテナー
+*************************************/
+.table_container {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+@media screen and (max-width: 979px) {
+  .table_container::-webkit-scrollbar {
+    height: 5px;
+  }
+  .table_container::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #eee;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  }
+  /*スクロールバーの動く部分*/
+  .table_container::-webkit-scrollbar-thumb {
+    background-color: rgba(29, 33, 139, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
+  }
+}
+/*************************************
+* テーブル1
+*************************************/
+.table1 {
+  &__thead, &__titem {
+    width: auto;
+
+    padding: 1.125rem;
+
+    line-height: $line-height;
+    vertical-align: text-top;
+  }
+  &__thead {
+    width: 300px;
+
+    text-align: left;
+    font-size: 1.125em;
+    font-weight: $font-weight-medium;
+  }
+
+  &__subtext {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    font-size: 0.875em;
+  }
+
+  tbody tr:last-child &__thead,
+  tbody tr:last-child &__titem {
+    border-top: 1px solid #d8d8d8;
+  }
+  @include media-query(tb) {
+    &__thead {
+      width: 200px;
+    }
+  }
+  @include media-query(sp) {
+    &__thead, &__titem {
+      display: block;
+      width: 100%;
+
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__thead {
+      padding-top: 0.5rem;
+      padding-bottom: 0;
+
+      font-size: 1em;
+    }
+    &__titem {
+      padding-top: 0.5rem;
+
+      border-bottom: #ddd 1px solid;
+    }
+    tbody tr:last-child &__thead,
+    tbody tr:last-child &__titem {
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+}
+
+@include media-query(lp) {
+}
+@include media-query(tb) {
+}
+@include media-query(sp) {
+}

@@ -1,0 +1,33 @@
+/**************************************************************
+*
+* トップページ
+*
+**************************************************************/
+.top {
+}
+@mixin hoge($color: #fff) {
+  @content;
+  color: $color;
+}
+.text {
+  @include hoge(black) {
+    font-size: 16px;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &.is-red {
+    @include hoge(red);
+  }
+  &.is-blue {
+    @include hoge(blue);
+  }
+}
+
+@include media-query(lp) {
+}
+@include media-query(tb) {
+}
+@include media-query(sp) {
+}

@@ -1,0 +1,153 @@
+/*************************************************************
+*
+* フォント・テキスト
+*
+*************************************************************/
+/*************************************************************
+* 文字サイズ
+*************************************************************/
+/* 親要素に対して文字サイズ0.85倍 */
+.text_small {
+  font-size: 0.889em;
+  line-height: 1.35;
+}
+
+/* 親要素に対して文字サイズ1.266倍 */
+.text_large {
+  font-size: 1.266em;
+}
+
+/* 親要素に対して文字サイズ2.027em倍 */
+.text_huge {
+  font-size: 2.027em;
+}
+
+/*************************************************************
+* 文字スタイル
+*************************************************************/
+/* 太字 */
+.text_bold {
+  font-weight: bold;
+}
+
+/* 広めの行間 */
+.line_height_high {
+  line-height: calc(1.75 * 1.224);
+}
+
+/* 画像キャプション用のテキスト */
+.text_caption {
+  line-height: 1.1;
+  font-size: 0.79em;
+
+  margin-top: 3px;
+}
+/* テキスト反転色 */
+::selection {
+  background: $color-primary; /*背景色*/
+  color: #fff; /*文字色*/
+}
+/*************************************************************
+* 引用
+*************************************************************/
+.blockquote {
+  padding: 1.426em 2.281em 1.602em;
+  position: relative;
+  margin-left: 2em;
+
+  &:before {
+    content: "“";
+    font-size: 5em;
+    line-height: 0.8em;
+    font-family: "Times New Roman", "ＭＳ Ｐゴシック", sans-serif;
+    color: #ababab;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+  .cite {
+    display: block;
+
+    margin-top: 1em;
+
+    font-size: 0.889em;
+    font-weight: bold;
+  }
+}
+/*************************************************************
+* タイポ 文字小
+*************************************************************/
+.typography-small {
+  font-size: 0.75em;
+}
+/*************************************************************
+* タイポ 文字大
+*************************************************************/
+.typography-large {
+  font-size: 1.125em;
+}
+/*************************************************************
+* タイポ 太文字
+*************************************************************/
+.typography-bold {
+  font-weight: $font-weight-bold;
+}
+/*************************************************************
+* タイポ1
+*************************************************************/
+.typography1 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-headline;
+
+  @include media-query(tb) {
+    font-size: 1.125em;
+  }
+  @include media-query(sp) {
+    font-size: 1em;
+    text-align: left;
+  }
+}
+/*************************************************************
+* タイポ2
+*************************************************************/
+.typography2 {
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+/*************************************************************
+* タイポ3
+*************************************************************/
+.typography3 {
+  font-size: 2em;
+  text-align: center;
+  font-weight: $font-weight-medium;
+  line-height: 1.468;
+
+  text-shadow: 0px 1px 6px rgba(150, 150, 150, 1);
+
+  @include media-query(sp) {
+    font-size: 1.266em;
+  }
+}
+/*************************************************************
+* タイポ4
+*************************************************************/
+.typography4 {
+  font-size: 1.125em;
+  text-align: center;
+  text-align-last: left;
+  line-height: $line-height;
+
+  max-width: 650px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-query(sp) {
+    font-size: 0.889em;
+    text-align: justify;
+  }
+}

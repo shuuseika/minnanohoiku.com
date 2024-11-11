@@ -1,0 +1,83 @@
+/*************************************************************
+*
+* コンテナ―・コンテンツ
+*
+*************************************************************/
+/*************************************************************
+* ページコンテナ―
+*************************************************************/
+.content_page {
+  max-width: $container-width;
+  width:100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutters-page-pc;
+  padding-right: $gutters-page-pc;
+
+  & &--small {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--small {
+    @extend .content_page;
+    max-width: $container-width-small;
+  }
+
+  @include media-query(tb) {
+    & {
+      padding-left: $gutters-page-tb;
+      padding-right: $gutters-page-tb;
+    }
+  }
+  @include media-query(sp) {
+    & {
+      padding-left: $gutters-page-sp;
+      padding-right: $gutters-page-sp;
+    }
+  }
+}
+
+/*************************************************************
+* コンテンツ
+*************************************************************/
+.block_section_large {
+  margin-bottom: $margin-gigantic;
+
+  @include media-query(sp) {
+    margin-bottom: $margin-large;
+  }
+}
+.block_section {
+  margin-bottom: $margin-huge;
+
+  @include media-query(sp) {
+    margin-bottom: $margin-medium;
+  }
+}
+.block_content_large {
+  margin-bottom: $margin-large;
+}
+.block_content {
+  margin-bottom: $margin-medium;
+}
+.block_paragraph {
+  margin-bottom: $margin-small;
+}
+.block_parts {
+  margin-bottom: $margin-tiny;
+}
+.padding_content_large {
+  padding-bottom: $margin-large;
+  padding-top: $margin-large;
+
+  @include media-query(sp) {
+    padding-bottom: $margin-medium;
+    padding-top: $margin-medium;
+  }
+}
+@include media-query(tb) {
+}
+@include media-query(sp) {
+}

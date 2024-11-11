@@ -1,0 +1,38 @@
+/*************************************************************
+*
+* フォント・テキスト
+*
+*************************************************************/
+/* 基本のフォントサイズ */
+html {
+  font-family: $font-family;
+  font-size: $font-size-pc;
+  font-weight: $font-weight-regular;
+  color: $color-text;
+  line-height: 1;
+  letter-spacing: $letter-spacing;
+}
+@include media-query(tb) {
+  html { font-size: $font-size-tb; }
+}
+@include media-query(sp) {
+  html { font-size: $font-size-sp; }
+}
+
+/*************************************************************
+* 文章折り返し
+*************************************************************/
+.text_center,
+.sp_justify {
+  text-align:center;
+}
+.text_left       {text-align:left;}
+.text_right      {text-align:right;}
+.text_justify    {text-align:justify;}
+
+/* 文字折り返し禁止 */
+.space {white-space:nowrap;}
+
+@include media-query(sp) {
+  .sp_justify { text-align: justify; }
+}

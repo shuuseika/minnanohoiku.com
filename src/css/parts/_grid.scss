@@ -1,0 +1,54 @@
+/**************************************************************
+*
+* フレックス
+*
+**************************************************************/
+$grid-breakpoints: pc-min, lp-between, tb, sp;
+
+@each $gb in $grid-breakpoints {
+  @include media-query(#{$gb}) {
+
+    $bp-name: "";
+    @if $gb == lp-between   { $bp-name: lp; }
+    @else if $gb == pc-min  { $bp-name: pc; }
+    @else                   { $bp-name: $gb; }
+
+    .fol_#{$bp-name}_1      { flex-basis: 8.3333333333%; }
+    .fol_#{$bp-name}_2      { flex-basis: 16.6666666666%; }
+    .fol_#{$bp-name}_3      { flex-basis: 25%; }
+    .fol_#{$bp-name}_4      { flex-basis: 33.3333333333%; }
+    .fol_#{$bp-name}_5      { flex-basis: 41.5555555555%; }
+    .fol_#{$bp-name}_6      { flex-basis: 50%; }
+    .fol_#{$bp-name}_7      { flex-basis: 58.3333333333%; }
+    .fol_#{$bp-name}_8      { flex-basis: 66.6666666666%; }
+    .fol_#{$bp-name}_9      { flex-basis: 75%; }
+    .fol_#{$bp-name}_10     { flex-basis: 83.3333333333%; }
+    .fol_#{$bp-name}_11     { flex-basis: 91.6666666666%; }
+    .fol_#{$bp-name}_12     { flex-basis: 100%; }
+    .fol_#{$bp-name}_fifth  { flex-basis: 20%; }
+
+    .fol_#{$bp-name}_6:nth-of-type(n+3) {
+      margin-top: $margin-large;
+    }
+    .fol_#{$bp-name}_12:nth-of-type(n+2) {
+      margin-top: $margin-small;
+    }
+  }
+}
+/**************************************************************
+* フレックスボックス用 共通
+**************************************************************/
+[class*=" flex_"],
+[class^="flex_"] {
+  display: flex;
+
+  /* フレックスアイテムの並び順 */
+  &.__flow_reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* 縦を真ん中揃えに */
+  &.__align_center {
+    flex-direction: row-reverse;
+  }
+}

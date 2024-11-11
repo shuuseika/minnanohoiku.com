@@ -1,0 +1,43 @@
+{
+  "name": "aura-office.co.jp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "postcss-wp": "postcss src/css/wp/* --base src/css/wp/ --dir assets/css/wp/ --watch --map",
+    "postcss-init": "postcss _themes/default/src/postcss/* --base _themes/default/src/postcss/ --dir _themes/default/assets/css/",
+    "postcss": "postcss _themes/default/src/postcss/* --base _themes/default/src/postcss/ --dir _themes/default/assets/css/ --watch --map",
+    "sass-init": "node-sass --include-path scss _themes/default/src/sass/ -o _themes/default/src/postcss/",
+    "sass": "node-sass --watch --include-path scss _themes/default/src/sass/ -o _themes/default/src/postcss/ --source-map-root file://${PWD}/ --source-map-embed true",
+    "bs": "browser-sync start --config bs-config.js",
+    "fractal": "fractal start --sync",
+    "develope": "run-p bs fractal sass postcss"
+  },
+  "fractal": {
+    "main": "fractalfile.js"
+  },
+  "author": "T.niki",
+  "license": "ISC",
+  "devDependencies": {
+    "@frctl/fractal": "^1.2.1",
+    "autoprefixer": "^9.5.0",
+    "browser-sync": "^2.24.7",
+    "csswring": "^7.0.0",
+    "gulp": "^4.0.0",
+    "gulp-imagemin": "6.0.0",
+    "gulp-uglify": "^3.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "8.0.0",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.0.0",
+    "postcss-color-function": "^4.0.1",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-custom-properties": "9.0.1",
+    "postcss-import": "^12.0.0",
+    "postcss-mixins": "^6.2.0",
+    "postcss-nested": "^4.1.2"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,8 @@
+DirectoryIndex index.php
+
+RewriteEngine on
+
+# 404
+ErrorDocument 404 client_doamin/www/error404/
+# 503
+ErrorDocument 503 client_doamin/www/error503/

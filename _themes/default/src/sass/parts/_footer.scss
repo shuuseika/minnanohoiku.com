@@ -1,0 +1,91 @@
+/**************************************************************
+*
+* フッター
+*
+**************************************************************/
+.footer {
+  position: relative;
+
+  background-color: #f3f3f3;
+
+  text-align: center;
+
+  .content_page {
+    padding-top: $margin-small;
+    padding-bottom: $margin-small;
+  }
+
+  &__logo {
+    display: block;
+
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $margin-small;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+
+    font-size: 0.875em;
+
+    &-item {
+      padding: 3px 1rem;
+
+      &:not(:last-child) {
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 1px;
+          height: 100%;
+
+          background-color: #707070;
+        }
+      }
+    }
+    &-anchor {
+      .hover &:hover,
+      &.hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include media-query(tb) {
+
+  }
+  @include media-query(sp) {
+    &__logo {
+      max-width: 240px;
+    }
+    &__nav {
+      font-size: 0.79em;
+
+      &-item {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.75em;
+  color: #fff;
+  letter-spacing: 0.025em;
+
+  padding: 0.889rem $gutters-page-pc;
+
+  display: block;
+
+  background-color: $color-primary;
+
+  @include media-query(sp) {
+    padding: 5px $gutters-page-sp;
+  }
+}

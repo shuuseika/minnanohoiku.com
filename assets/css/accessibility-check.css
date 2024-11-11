@@ -1,0 +1,26 @@
+/* フォーム内のtype属性指定がないボタンへの警告 */
+form button:not([type]):after {
+	background-color: red;
+	color: white;
+	content: '警告：このボタンにはtype属性がありません。submitですか、resetですか、単純なボタンですか？';
+}
+
+/* ボタン・リンクに十分な情報（テキスト）が含まれていない場合の警告 */
+a:empty:not([aria-label]):not([aria-labelledby]):after,
+button:empty:not([aria-label]):not([aria-labelledby]):after:not([aria-controls]):after {
+	background-color: red;
+	color: white;
+	content: "警告：このボタンに関する情報が十分ではありません。ボタンの中にテキストを含めてください。";
+}
+a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt]),
+button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt]) {
+	background-color: red;
+	filter: grayscale(100%);
+}
+
+/* セクションタグのチェック */
+section > section:first-child:after {
+	background-color: red;
+	color: white;
+	content: "警告：sectionタグがdivタグのように使われています。各セクションタグには見出しタグを追加しましょう。"
+}

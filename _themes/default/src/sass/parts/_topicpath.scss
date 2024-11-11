@@ -1,0 +1,28 @@
+/**************************************************************
+*
+* パンくず
+*
+**************************************************************/
+.topicpath {
+  li {
+    display: inline-block;
+
+    &:after {
+      content: ">";
+      margin-left: 10px;
+    }
+
+    &:last-child:after {content: none;}
+
+    a {
+      text-decoration: underline;
+
+      .hover &:hover,
+      &.hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  i:before {vertical-align: bottom;}
+}

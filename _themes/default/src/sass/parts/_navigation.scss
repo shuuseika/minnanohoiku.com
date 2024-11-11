@@ -1,0 +1,126 @@
+/**************************************************************
+*
+* グローバルナビゲーション
+*
+**************************************************************/
+.navigation {
+  height: 114px;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 4.375rem;
+      }
+    }
+
+    &-anchor {
+      font-size: 1.125em;
+      font-weight: $font-weight-medium;
+
+      transition: color 120ms $anim-function;
+
+      .hover &:hover,
+      &.hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &.fix {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    background-color: rgba(255,255,255,0.9);
+
+    position: fixed;
+    height: auto;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    animation: navfix 300ms ease-in-out forwards;
+  }
+
+  @media screen and (max-width: 1339px) {
+    &__list {
+      &-item {
+        &:not(:last-child) {
+          margin-right: 1.75rem;
+        }
+      }
+      &-anchor {
+        font-size: 1em;
+      }
+    }
+  }
+  @media screen and (max-width: 979px) {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+
+    transition: transform $anim-duration $anim-function;
+
+    padding: $margin-tiny;
+
+    &__list {
+      display: block;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+
+      transform: translateY(-50%);
+
+      &-item {
+        text-align: left;
+
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+          margin-right: 0;
+        }
+      }
+      &-anchor {
+        font-size: 1.125em;
+        font-weight: $font-weight-regular;
+        line-height: $line-height;
+      }
+      .btn3 {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+
+    &.active {
+      transform: translateX(-100%);
+    }
+  }
+  @include media-query(sp) {
+    width: 260px;
+
+    &__list {
+      &-anchor {
+        font-weight: $font-weight-medium;
+      }
+    }
+  }
+}
+
+@keyframes navfix {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
