@@ -12,11 +12,11 @@
   left: $gutters-page-pc;
 
   &__logo {
-    max-width: 251px;
+    max-width: 230px;
   }
 
   &.fix {
-    top: 0.3rem;
+    top: 0.5rem;
 
     #{$this}__logo {
       max-width: 150px;
