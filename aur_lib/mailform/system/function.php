@@ -1,5 +1,5 @@
 <?php
-require_once(LP_ROOT."/aur_lib/Log/Log.php");
+require_once(DOCUMENT_ROOT."/aur_lib/Log/Log.php");
 require_once(INQ_SYSTEM_DIR.'/sendMail.php');
 
 /**
@@ -191,6 +191,6 @@ function is_completeFormTask($sendMailAdminFlag, $makeLogFlag, $uploaddir=null) 
   }
 
   //ページ遷移
-  header("Location: ../customer/thanks.php");
+  header("Location: contact/thanks/index.php");
   exit;
 }

@@ -6,14 +6,14 @@ define("FORM_MODE", 'test');
  # メール送信 共通
  # ---------------------------------------------------------------------------┤
   //送信アドレス
-  $from = 'toricre-touroku@torisan-net.com';
+  $from = 'staff+test@aura-office.co.jp';
 
   //送信社名
   $fromName = '株式会社 トリサン';
 
   //送信先アドレス(管理者)
-  if(FORM_MODE === 'public') $toGroup_admin = array('toricre-touroku@torisan-net.com');
-  else $toGroup_admin = array('work@aura-office.com');
+  if(FORM_MODE === 'public') $toGroup_admin = array('minhoku_infocontact1@minnanohoiku.jp');
+  else $toGroup_admin = array('staff+test@aura-office.co.jp');
 ##━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ##━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -26,9 +26,9 @@ define("FORM_MODE", 'test');
  # 自動返信メール 件名
  # ---------------------------------------------------------------------------┤
   //ユーザー
-  $subject = '[トリサンクリエイター関西] お問い合わせありがとうございます';
+  $subject = '[みんなの保育] お問い合わせを受け付けました';
 
   //管理者
-  $subject_admin = '[トリサンクリエイター関西] ポテンシャル採用プランについてのお問い合わせがあります';
+  $subject_admin = '[みんなの保育] お問い合わせを受け付けました';
 
 ##━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛

@@ -6,14 +6,18 @@ $outputSorce .= 'こちらのメールへはご返信いただけません。予
 $outputSorce .= '----------------------------------------------------------------------'."\n";
 $outputSorce .= ''."\n";
 $outputSorce .= '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'."\n";
-$outputSorce .= '【トリサンクリエイター関西へのお問い合わせ】'."\n";
+$outputSorce .= '【みんなの保育】お問い合わせ'."\n";
 $outputSorce .= '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'."\n";
 $outputSorce .= ''."\n";
 $outputSorce .= $sendDataBox['name']['value'].'様'."\n";
 $outputSorce .= ''."\n";
-$outputSorce .= 'この度はトリサンクリエイター関西 ポテンシャル採用プランについてお問い合わせいただき有難うございます。'."\n";
-$outputSorce .= 'お問い合わせ内容を確認し、担当よりご連絡差し上げます。'."\n";
-$outputSorce .= '今しばらくお待ちくださいませ。'."\n";
+if(isset($sendMailAdminFlag)) {
+  $outputSorce .= 'この度は、みんなの保育へお問い合わせいただきありがとうございます。'."\n";
+  $outputSorce .= 'お問い合わせ内容を確認次第、担当者より折り返しご連絡いたします。'."\n";
+  $outputSorce .= '恐れ入りますが、今しばらくお待ちいただきますようお願いいたします。'."\n";
+} else {
+  $outputSorce .= '下記情報のお問合せがありました。'."\n";
+}
 $outputSorce .= ''."\n";
 # お知らせ掲載
 include(DOCUMENT_ROOT."/include/mail/notice.php");
@@ -21,11 +25,16 @@ $outputSorce .= ''."\n";
 $outputSorce .= '-------------------------------------------------------------------'."\n";
 $outputSorce .= ''."\n";
 $outputSorce .= '[ご入力者様情報]'."\n";
-$outputSorce .= '会社名'.'：'.hscd($sendDataBox['company']['value'])."\n";
-$outputSorce .= '担当者名'.'：'.$sendDataBox['name']['value']."\n";
+$outputSorce .= 'お名前'.'：'.$sendDataBox['name']['value']."\n";
 $outputSorce .= 'メールアドレス'.'：'.$sendDataBox['email']['value']."\n";
 $outputSorce .= '電話番号'.'：'.$sendDataBox['tel']['value']."\n";
 $outputSorce .= 'お問い合わせ内容'.'：'.hscd($sendDataBox['comment']['value'])."\n";
+$outputSorce .= 'お仕事情報を希望する：';
+if($sendDataBox['job']['value'] == "希望する") {
+  $outputSorce .= '希望する';
+} else {
+  $outputSorce .= '希望しない';
+}
 $outputSorce .= ''."\n";
 # 署名
 include(DOCUMENT_ROOT."/include/mail/signature.php");

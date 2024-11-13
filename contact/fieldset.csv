@@ -1,7 +1,7 @@
 N,title [text],Type [text],Name [text],Value [text],Class [text],Required [1/0],Placeholder [text],Protect [1/0],Checktype [text],RelationItem [text],RelationOperator [text],END
-0,同意チェック,agree,agree,,agree,1,個人情報の取り扱いに同意する,0,,,,
-1,会社名,text,company,,company text_type2,1,株式会社トリサン,0,,,,
-2,ご担当者名,text,name,,name text_type2,1,トリサン太郎,0,name,,,
-3,メールアドレス,email,email,,email text_type2,1,example@mail.co.jp,0,email,,,
-4,電話番号,tel,tel,,phone text_type2 __small,1,12-3456-7890,0,tel3,,,
-5,お問い合わせ内容,textarea,comment,,comment,0,求人される職種など、ご相談内容をご入力ください,0,,,,
+0,同意チェック,agree,agree,,agree,1,同意する,0,,,,
+1,お名前,text,name,,name text_type2,1,トリサン太郎,0,name,,,
+2,メールアドレス,email,email,,email text_type2,1,example@mail.co.jp,0,email,,,
+3,電話番号,tel,tel,,phone text_type2 __small,1,12-3456-7890,0,tel3,,,
+4,お問い合わせ内容,textarea,comment,,comment,0,求人などのご相談内容をご入力ください,0,,,,
+5,お仕事情報を希望する,check,job,,check,0,希望する,0,,,,
