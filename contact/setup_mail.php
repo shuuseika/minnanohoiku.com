@@ -12,7 +12,7 @@ define("FORM_MODE", 'test');
   $fromName = '株式会社 トリサン';
 
   //送信先アドレス(管理者)
-  if(FORM_MODE === 'public') $toGroup_admin = array('minhoku_infocontact1@minnanohoiku.jp');
+  if(FORM_MODE === 'public') $toGroup_admin = array('minhoku_contact1@torisan-net.com');
   else $toGroup_admin = array('staff+test@aura-office.co.jp');
 ##━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
