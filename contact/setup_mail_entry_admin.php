@@ -12,11 +12,11 @@ $outputSorce .= ''."\n";
 $outputSorce .= $sendDataBox['name']['value'].'様'."\n";
 $outputSorce .= ''."\n";
 if(isset($sendMailAdminFlag)) {
+  $outputSorce .= '下記情報のお問合せがありました。'."\n";
+} else {
   $outputSorce .= 'この度は、みんなの保育へお問い合わせいただきありがとうございます。'."\n";
   $outputSorce .= 'お問い合わせ内容を確認次第、担当者より折り返しご連絡いたします。'."\n";
   $outputSorce .= '恐れ入りますが、今しばらくお待ちいただきますようお願いいたします。'."\n";
-} else {
-  $outputSorce .= '下記情報のお問合せがありました。'."\n";
 }
 $outputSorce .= ''."\n";
 # お知らせ掲載
