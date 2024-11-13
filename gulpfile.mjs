@@ -33,7 +33,7 @@ gulp.task("imageMinTask", function() {	//「imageMinTask」という名前のタ
 
 /*******************************************
  * JSファイルの圧縮
- * @return {Stream} 
+ * @return {Stream}
  *******************************************/
 gulp.task('min-js', function() {
 	return gulp
@@ -44,7 +44,7 @@ gulp.task('min-js', function() {
 		})
 			.on('error', function(e){
 				console.log(e);
-			}) 
+			})
 		)
 		.pipe(gulp.dest('assets/dist/js/'));
 });
