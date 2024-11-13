@@ -126,8 +126,6 @@
   font-weight: $font-weight-medium;
   line-height: 1.468;
 
-  text-shadow: 0px 1px 6px rgba(150, 150, 150, 1);
-
   @include media-query(sp) {
     font-size: 1.266em;
   }
@@ -136,9 +134,7 @@
 * タイポ4
 *************************************************************/
 .typography4 {
-  font-size: 1.125em;
-  text-align: center;
-  text-align-last: left;
+  font-size: 1em;
   line-height: $line-height;
 
   max-width: 650px;
@@ -149,5 +145,28 @@
   @include media-query(sp) {
     font-size: 0.889em;
     text-align: justify;
+  }
+}
+/*************************************************************
+* タイポ5
+*************************************************************/
+.typography5 {
+  column-gap: 0.5rem;
+
+  font-size: 1.5em;
+  font-weight: $font-weight-medium;
+  line-height: $line-height;
+
+  // Flex
+  &.__flex {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  @include media-query(tb) {
+    font-size: 1.5em;
+  }
+  @include media-query(sp) {
+    font-size: 1em;
   }
 }

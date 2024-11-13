@@ -3,6 +3,41 @@
 * ヘッダー
 *
 **************************************************************/
+.header {
+  $this: &;
+  position: fixed;
+  z-index: 12;
+
+  top: 1rem;
+  left: $gutters-page-pc;
+
+  &__logo {
+    max-width: 251px;
+  }
+
+  &.fix {
+    top: 0.3rem;
+
+    #{$this}__logo {
+      max-width: 150px;
+    }
+  }
+
+  @media screen and (max-width: 979px) {
+    position: static;
+
+    &__logo {
+      margin-left: $gutters-page-sp;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      max-width: 12rem;
+    }
+  }
+
+  @include media-query(sp) {
+
+  }
+}
 
 /**************************************************************
 * ハンバーガーメニュー

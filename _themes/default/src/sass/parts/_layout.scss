@@ -7,21 +7,47 @@
 * Layout1
 *************************************************************/
 .layout1 {
+  $this: &;
   position: relative;
 
   &__image {
-    max-width: calc(100% - 80px);
+    width: 60%;
+    max-height: 54rem;
+
+    .objfit {
+      height: 100%;
+    }
   }
 
   .box4 {
     position: absolute;
     right: $gutters-page-pc;
-    top: 240px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    width: 50rem;
+    height: 35rem;
   }
-  @include media-query(tb) {
-    &__image {
-      max-width: 100%;
+
+  // Reverse
+  &.__reverse {
+    #{$this}__image {
+      margin-left: 40%;
     }
+
+    .box4 {
+      left: $gutters-page-pc;
+      right: auto;
+    }
+  }
+
+  @media screen and (max-width: 979px) {
+    &__image {
+      width: 100%;
+    }
+
     .box4 {
       position: relative;
       top: auto;
@@ -29,8 +55,24 @@
       border-radius: 0px;
 
       margin-top: -120px;
+      width: 100%;
+      height: auto;
 
       background-color: $color-secondary;
+    }
+
+    // Reverse
+    &.__reverse {
+      #{$this}__image {
+        margin-left: 0;
+      }
+
+      .box4 {
+        position: relative;
+        left: auto;
+        top: auto;
+        right: auto;
+      }
     }
   }
   @include media-query(sp) {
@@ -43,9 +85,15 @@
 * Layout2
 *************************************************************/
 .layout2 {
+  $this: &;
   position: relative;
 
   padding: $margin-gigantic $gutters-page-pc;
+
+  // Padding Large
+  &.__padding-large {
+    padding: 10rem $gutters-page-pc;
+  }
 
   &__image, .box3 {
     @extend %animation;
@@ -81,6 +129,15 @@
   }
   @include media-query(sp) {
     padding: 0;
+
+    &__image {
+      display: none;
+    }
+
+    // Padding Large
+    &.__padding-large {
+      padding: 0;
+    }
 
     .objfit {
       position: static;
@@ -453,13 +510,13 @@
   &__puzzle {
     position: absolute;
     z-index: -1;
-    top: -30px;
+    top: 0;
     left: 0;
     right: 0;
 
     margin: auto;
 
-    width: 800px;
+    width: 480px;
     max-width: 80%;
   }
 
@@ -670,3 +727,7 @@
     }
   }
 }
+
+/*************************************************************
+* ラインボダン
+*************************************************************/

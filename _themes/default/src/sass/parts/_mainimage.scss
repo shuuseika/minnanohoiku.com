@@ -32,6 +32,7 @@
   }
 }
 .mainimage {
+  margin-bottom: 5rem;
   height: calc(100vh - 114px);
   min-height: 700px;
   position: relative;
@@ -92,19 +93,18 @@
   &__puzzle {
     position: absolute;
     z-index: -1;
-    top: 50%;
-    left: 50%;
-    max-width: 80%;
+    top: 45%;
+    right: 0;
+    max-width: 55%;
 
-    transform: translate(-50%,-50%);
+    transform: translateY(-50%);
   }
   &__logo {
-    max-width: 320px;
-
-    margin-bottom: $margin-medium;
+    margin-bottom: 1.5rem;
+    max-width: 200px;
   }
   &__maintext {
-    font-size: 1.875em;
+    font-size: 3.5em;
     font-weight: $font-weight-bold;
     line-height: 1.3;
     text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.6);
@@ -119,10 +119,12 @@
       padding-right: 6px;
     }
     &-strong {
-      padding: 5px 10px;
+      margin-top: 20px;
+      padding: 5px 10px 10px;
       margin-left: 5px;
 
       display: inline-block;
+      font-size: 1.2em;
 
       color: #fff;
       font-weight: inherit;
@@ -176,9 +178,9 @@
 
   &__paragraph {
     line-height: $line-height;
-    font-size: 1em;
+    font-size: 1.3em;
 
-    margin-bottom: $margin-small;
+    margin-bottom: $margin-gigantic;
   }
 
   .objfit {
@@ -187,7 +189,7 @@
 
   &__more {
     position: absolute;
-    bottom: 0%;
+    bottom: 20%;
     left: calc(#{$margin-small} + #{$gutters-page-pc});
 
     animation: more 2000ms ease-in-out infinite;
@@ -199,11 +201,11 @@
   }
 
   @media screen and (max-width: 1339px) {
-    &__logo {
-      max-width: 280px;
+    &__maintext {
+      font-size: 3em;
     }
     &__detail {
-      flex-basis: calc(600px + (2 * #{$margin-small}));
+      flex-basis: calc(520px + (2 * #{$margin-small}));
 
       font-size: 0.79em;
     }
@@ -212,6 +214,7 @@
     }
   }
   @media screen and (max-width: 979px) {
+    margin-top: -7rem;
     flex-flow: column-reverse wrap;
     height: 100vh;
 
@@ -232,19 +235,8 @@
         max-width: 800px;
       }
     }
-    &__logo {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 380px;
-
-    }
     &__puzzle {
-      max-width: 80%;
-    }
-    &__maintext {
-      text-align: center;
-
-      margin-bottom: $margin-large;
+      max-width: 60%;
     }
     &__dlist {
       max-width: 600px;
@@ -256,14 +248,12 @@
       font-size: 1em;
       text-align: justify;
 
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
       margin-bottom: $margin-large;
-
     }
+
     &__more {
-      display: none;
+      bottom: 4rem;
     }
   }
 
@@ -294,21 +284,16 @@
       transform: translate(0px, 0px);
     }
     &__logo {
-      position: absolute;
-      top: 28px;
 
-      max-width: 220px;
     }
     &__maintext {
-      font-size: 1.802em;
+      font-size: 2em;
       text-align: left;
       line-height: $line-height-headline;
 
-      margin-bottom: $margin-tiny;
-
       &-strong {
         margin-left: 0;
-        margin-top: 10px;
+        padding: 5px 10px 6px;
 
         font-size: 1.266em;
       }

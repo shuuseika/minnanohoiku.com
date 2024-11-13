@@ -6,7 +6,7 @@
 .footer {
   position: relative;
 
-  background-color: #f3f3f3;
+  background-color: #F8F8EF;
 
   text-align: center;
 
@@ -49,9 +49,11 @@
       }
     }
     &-anchor {
+      text-decoration: underline;
+
       .hover &:hover,
       &.hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }

@@ -159,6 +159,8 @@
 * リスト ポイント
 *************************************/
 .list-point {
+  $this: &;
+
   &__item {
     display: flex;
 
@@ -166,6 +168,16 @@
 
     &:not(:last-child) {
       margin-bottom: 1rem;
+    }
+
+    // Full
+    &.__full {
+      display: block;
+
+      #{$this}__content {
+        display: block;
+        margin-left: 0;
+      }
     }
   }
   &__head {
@@ -222,8 +234,7 @@
   &__item {
     position: relative;
 
-    padding-left: 60px;
-
+    padding-left: 3.5rem;
     line-height: $line-height;
 
     &:not(:last-child) {
@@ -231,15 +242,23 @@
     }
 
     &:before {
-      content: "";
-      width: 45px;
-      height: 40px;
+      content: "✓";
+      min-width: 2rem;
+      height: 2rem;
       position: absolute;
-      top: 0;
+      top: 0.5rem;
       left: 0;
-      background-image: url(img/icon_check.png);
-      background-size: contain;
-      background-repeat: no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid $color-primary;
+
+      color: $color-primary;
+      font-size: 1.5rem;
     }
   }
   &__head {
@@ -260,21 +279,21 @@
     font-size: 0.79em;
 
     &__item {
-      padding-left: 45px;
-
       &:before {
-        width: 38px;
+        top: 0.3rem;
       }
     }
   }
   @include media-query(sp) {
     &__item {
-      padding-left: 35px;
+      padding-left: 2.8rem;
 
       line-height: $line-height-sp;
 
       &:before {
-        width: 30px;
+        min-width: 1.6rem;
+        height: 1.6rem;
+        font-size: 1.2rem;
       }
     }
   }
