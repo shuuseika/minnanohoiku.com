@@ -249,15 +249,15 @@ $meta_description = '';
 
             <p class="block_content typography5 __flex">
               <img src="<?php echo ASSETS_URL;?>/svg/quote.svg" class="typography5__quote">
-              丁寧かつ迅速にご対応いただき感謝しております。保育のお仕事が初めてでしたがいろいろとご配慮いただいたので負担感なくお仕事を続けることが出来ております。
+              <span>丁寧かつ迅速にご対応いただき感謝しております。保育のお仕事が初めてでしたがいろいろとご配慮いただいたので負担感なくお仕事を続けることが出来ております。<span class="typography5__subtext">(50代・女性)</span></span>
             </p>
             <p class="block_content typography5 __flex">
               <img src="<?php echo ASSETS_URL;?>/svg/quote.svg" class="typography5__quote">
-              困った時に連絡すると、すぐ対応して下さるので心強く思っています。満足しています。
+              <span>困った時に連絡すると、すぐ対応して下さるので心強く思っています。満足しています。<span class="typography5__subtext">(50代・女性)</span></span>
             </p>
             <p class="typography5 __flex">
               <img src="<?php echo ASSETS_URL;?>/svg/quote.svg" class="typography5__quote">
-              些細なことも相談しやすく頼りにしております。通える範囲すべての 保育園やこども園の募集状況を聞いてくださり、とても迅速に対応してくれました。
+              <span>些細なことも相談しやすく頼りにしております。通える範囲すべての 保育園やこども園の募集状況を聞いてくださり、とても迅速に対応してくれました。<span class="typography5__subtext">(30代・女性)</span></span>
             </p>
           </div>
         </div>
