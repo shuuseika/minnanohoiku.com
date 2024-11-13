@@ -1,4 +1,4 @@
 DirectoryIndex index.php
 
 # 404エラー
-ErrorDocument 404 toricreator.com/potential-recruit/error404/
+ErrorDocument 404 error404/
