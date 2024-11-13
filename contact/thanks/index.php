@@ -73,13 +73,13 @@ $subpageflag = true; #サブページのフラグ
             <h2 class="headline1 block_content_large">お問い合わせありがとうございました。</h2>
 
             <div class="box5">
-              <p class="typography5">
+              <p class="typography5 block_paragraph">
                 ご入力されたアドレスに自動返信メールが配信されます。<br>
-                自動返信メールが届かない場合は、<b><a href="tel:06-6314-6001">06-6314-6001</a></b>までお電話ください。
+                自動返信メールが届かない場合は、恐れ入りますが送信内容をご確認のうえ、再度お問い合わせフォームより内容を送信いただきますようお願いいたします。
               </p>
               <p class="typography5 block_content">
-                お問い合わせ内容を確認し、担当者より折り返しご連絡いたしますので今しばらくお待ち下さい。<br>
-                その他、何かご不明な点等ございましたら、お気軽にお問い合わせ下さい。
+                お問い合わせ内容を確認次第、担当者より折り返しご連絡いたしますので今しばらくお待ちください。<br>
+                その他、何かご不明な点等ございましたら、お気軽にお問い合わせください。
               </p>
 
               <div class="flex_type4">
@@ -91,21 +91,8 @@ $subpageflag = true; #サブページのフラグ
       </section>
     </main>
 
-    <footer class="footer" id="footer">
-      <div class="content_page">
-        <a href="../../" target="_blank" class="footer__logo hover_alpha">
-          <img src="<?php echo ASSETS_URL;?>/svg/logo01.svg" alt="みんなの保育 保育士派遣サービス">
-        </a>
-
-        <ul class="footer__nav">
-          <li class="footer__nav-item">
-            <a href="https://torisan-net.com/privacy/" target="_blank" class="footer__nav-anchor">プライバシーポリシー</a>
-          </li>
-        </ul>
-      </div>
-
-      <small class="copyright">Copyright © TORISAN CO..LTD All RIGHTS RESERVED.</small>
-    </footer>
+    <?php # フッター ?>
+    <?php include(DOCUMENT_ROOT."/include/footer.php"); ?>
 
     <?php include(DOCUMENT_ROOT."/include/html_body2.php"); ?>
 
