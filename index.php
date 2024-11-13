@@ -15,8 +15,6 @@ $meta_description = '';
 <html lang="ja">
   <head prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#">
     <?php include(DOCUMENT_ROOT."/include/ga.php"); ?>
-    <?php include(DOCUMENT_ROOT."/include/html_head1.php"); ?>
-    <?php include(DOCUMENT_ROOT."/include/html_head2.php"); ?>
     <?php include(DOCUMENT_ROOT."/include/html_meta.php"); ?>
     <meta name="keywords" content="<?php foreach($site_keywords as $keyword) echo $keyword.',';?>">
     <meta name="description" content="<?php echo $meta_description;?>">
@@ -30,7 +28,7 @@ $meta_description = '';
     <meta property="og:description" content="<?php echo $meta_description;?>">
     <?php /* Twitter設定(summary/summarylargeimage/photo/gallery/app) */ ?>
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?php echo $site_title;?>）">
+    <meta name="twitter:title" content="<?php echo $site_title;?>">
     <meta name="twitter:description" content="<?php echo $meta_description;?>">
     <meta name="twitter:image" content="<?php echo HOME_URL;?>/assets/img/fbimage.jpg">
     <!-- オープングラフタグここまで -->
@@ -173,7 +171,7 @@ $meta_description = '';
         </p>
         <div class="layout1 block_section_large">
           <figure class="layout1__image">
-            <?php set_img(ASSETS_URL."/img/img03@2x.jpg","対応エリア"); ?>
+            <?php set_img(ASSETS_URL."/img/img03@2x.jpg","対応エリア","objfit"); ?>
           </figure>
 
           <div class="box4">
@@ -188,12 +186,7 @@ $meta_description = '';
               <ul class="list-check">
                 <li class="list-check__item">
                   <span class="list-check__content">
-                    大阪市
-                  </span>
-                </li>
-                <li class="list-check__item">
-                  <span class="list-check__content">
-                    大阪府下全域
+                    大阪市を中心とした大阪府下全域
                   </span>
                 </li>
                 <li class="list-check__item">
@@ -244,7 +237,7 @@ $meta_description = '';
         </p>
         <div class="layout1 block_section_large __reverse">
           <figure class="layout1__image">
-            <?php set_img(ASSETS_URL."/img/img04@2x.jpg","ご利用の方の声"); ?>
+            <?php set_img(ASSETS_URL."/img/img04@2x.jpg","ご利用の方の声","objfit"); ?>
           </figure>
 
           <div class="box4">
@@ -254,13 +247,17 @@ $meta_description = '';
               働く方々の体験談
             </p>
 
-            <p class="block_paragraph typography5 __flex">
+            <p class="block_content typography5 __flex">
               <img src="<?php echo ASSETS_URL;?>/svg/quote.svg" class="typography5__quote">
-              みんなの保育のおかげで、希望通りの職場に出会えました。サポートが心強かったです。
+              丁寧かつ迅速にご対応いただき感謝しております。保育のお仕事が初めてでしたがいろいろとご配慮いただいたので負担感なくお仕事を続けることが出来ております。
+            </p>
+            <p class="block_content typography5 __flex">
+              <img src="<?php echo ASSETS_URL;?>/svg/quote.svg" class="typography5__quote">
+              困った時に連絡すると、すぐ対応して下さるので心強く思っています。満足しています。
             </p>
             <p class="typography5 __flex">
               <img src="<?php echo ASSETS_URL;?>/svg/quote.svg" class="typography5__quote">
-              転職活動を通じて、キャリアアップができました。<br class="under_tb_none">コーディネーターの方のアドバイスがとても役立ちました。
+              些細なことも相談しやすく頼りにしております。通える範囲すべての 保育園やこども園の募集状況を聞いてくださり、とても迅速に対応してくれました。
             </p>
           </div>
         </div>
@@ -504,23 +501,8 @@ $meta_description = '';
       <?php # /Company ?>
     </main>
 
-    <footer class="footer" id="footer">
-      <div class="content_page">
-        <a href="../" target="_blank" class="footer__logo hover_alpha">
-          <img src="<?php echo ASSETS_URL;?>/svg/logo01.svg" alt="みんなの保育 保育士派遣サービス">
-        </a>
-
-        <ul class="footer__nav">
-          <li class="footer__nav-item">
-            <a href="https://torisan-net.com/privacy/" target="_blank" class="footer__nav-anchor">プライバシーポリシー</a>
-          </li>
-        </ul>
-      </div>
-
-      <small class="copyright">Copyright © TORISAN CO..LTD All RIGHTS RESERVED.</small>
-
-      <a href="https://www.aura-office.co.jp/" target="_blank" rel="noopener" id="logo_aura" class="hover_alpha"><?php set_img('../../assets/img/common/logo_aura@2x.png','ホームページ制作会社 アウラ');?></a>
-    </footer>
+    <?php # フッター ?>
+    <?php include(DOCUMENT_ROOT."/include/footer.php"); ?>
 
     <?php # Lineへのリンク ?>
     <a id="fix-button" class="fix-button" href="https://line.me/R/ti/p/@706farfj?ts=11111617&oat_content=url" target="_blank" rel="noopener">
