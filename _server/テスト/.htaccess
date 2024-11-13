@@ -2,7 +2,9 @@ DirectoryIndex index.php
 
 RewriteEngine on
 
+RewriteRule ^contact/$ / [R=301,L]
+
 # 404
-ErrorDocument 404 client_doamin/www/error404/
+ErrorDocument 404 /minnanohoiku.com/www/error404/
 # 503
-ErrorDocument 503 client_doamin/www/error503/
+ErrorDocument 503 /minnanohoiku.com/www/error503/
