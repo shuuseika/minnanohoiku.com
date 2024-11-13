@@ -8,19 +8,11 @@
   position: fixed;
   z-index: 12;
 
-  top: 1rem;
+  top: 0.8rem;
   left: $gutters-page-pc;
 
   &__logo {
-    max-width: 230px;
-  }
-
-  &.fix {
-    top: 0.5rem;
-
-    #{$this}__logo {
-      max-width: 150px;
-    }
+    max-width: 150px;
   }
 
   @media screen and (max-width: 979px) {
