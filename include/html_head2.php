@@ -27,7 +27,7 @@ endif;
 
 # IE・EDGE対策を以下に記述
 if (strstr(UA, 'Trident') || strstr(UA, 'MSIE') || strstr(UA, 'Edge')) { ?>
-<script src="<?php echo LP_URL;?>/assets/js/iefix/ofi.min.js"></script>
+<script src="<?php echo HOME_URL;?>/assets/js/iefix/ofi.min.js"></script>
 <script>
 /******************************
  * Object-Fit-Images

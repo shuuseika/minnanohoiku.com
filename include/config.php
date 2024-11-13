@@ -2,9 +2,9 @@
 /*━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃	※ SETUP : Site-Info ※
 ┗━━━━━━━━━━━━━━━━━━━━━━━━*/
-$site_title = '一律40万円のポテンシャル採用プラン！クリエイター・エンジニア採用のトリサンクリエイター関西'; #サイト名
-$site_domain = 'toricreator.com'; #サイトドメイン
-$site_keywords = array('Web','ゲーム','遊技機','エンジニア','クリエイター','採用','ポテンシャル採用','大阪'); #キーワード
+$site_title = 'みんなの保育'; #サイト名
+$site_domain = 'minnanohoiku.com'; #サイトドメイン
+$site_keywords = array('看護師','派遣'); #キーワード
 
 /*━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃	※ SETUP : 使用テーマ（テーマのディレクトリ名を指定） ※
@@ -77,22 +77,16 @@ if(THIS_SERVER == 'local') {
   define("DOCUMENT_ROOT", preg_replace('/\/\//','/',$_SERVER["DOCUMENT_ROOT"].'/'.$site_domain.'_git'));
 } elseif(THIS_SERVER == 'demo') {
   #テストサーバー
-  define("DOCUMENT_ROOT", $_SERVER["DOCUMENT_ROOT"].'/www');
+  define("DOCUMENT_ROOT", $_SERVER["DOCUMENT_ROOT"].'/'.$site_domain.'/www');
 } elseif(THIS_SERVER == 'public') {
   #公開サーバー
   define("DOCUMENT_ROOT", $_SERVER["DOCUMENT_ROOT"]);
 }
 
-# LPルート
-define("LP_ROOT", DOCUMENT_ROOT.'/potential-recruit');
-
 # システムファイル
 #----------------------------------------------------------
-define("AURA_SYSTEM_ROOT", LP_ROOT.'/aur_lib');
+define("AURA_SYSTEM_ROOT", DOCUMENT_ROOT.'/aur_lib');
 
-# テーマディレクトリ
-#----------------------------------------------------------
-define("THEME_ROOT", LP_ROOT.'/_themes/'.SITE_THEME);
 /*━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃	※ SETUP : URL ※
 ┗━━━━━━━━━━━━━━━━━━━━━━━━*/
@@ -104,18 +98,15 @@ if(THIS_SERVER == 'local') {
   define("HOME_URL", PROTOCOL.'localhost/'.$site_domain.'_git');
 } elseif(THIS_SERVER == 'demo') {
   #テストサーバー
-  define("HOME_URL", PROTOCOL.$_SERVER['HTTP_HOST'].'/www');
+  define("HOME_URL", PROTOCOL.$_SERVER['HTTP_HOST'].'/'.$site_domain.'/www');
 } elseif(THIS_SERVER == 'public') {
 	#公開サーバー
   define("HOME_URL", PROTOCOL.$_SERVER['HTTP_HOST']);
 }
 
-# LPルート
-define("LP_URL", HOME_URL."/potential-recruit");
-
 # アセットディレクトリ
-define("ASSETS_URL", LP_URL."/assets");
+define("ASSETS_URL", HOME_URL."/assets");
 
 # テーマディレクトリ
 #----------------------------------------------------------
-define("THEME_URL", LP_URL.'/_themes/'.SITE_THEME);
+define("THEME_URL", HOME_URL.'/_themes/'.SITE_THEME);
