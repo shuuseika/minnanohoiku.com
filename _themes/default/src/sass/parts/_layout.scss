@@ -9,10 +9,17 @@
 .layout1 {
   $this: &;
   position: relative;
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1980px;
 
   &__image {
     width: 60%;
-    max-height: 54rem;
+    height: 54rem;
 
     .objfit {
       height: 100%;
@@ -20,32 +27,26 @@
   }
 
   .box4 {
-    position: absolute;
-    right: $gutters-page-pc;
-    top: 0;
-    bottom: 0;
     margin-top: auto;
     margin-bottom: auto;
 
     width: 50rem;
-    height: 35rem;
+    height: auto;
+
+    align-self: flex-start;
   }
 
   // Reverse
   &.__reverse {
-    #{$this}__image {
-      margin-left: 40%;
-    }
-
-    .box4 {
-      left: $gutters-page-pc;
-      right: auto;
-    }
+    flex-direction: row-reverse;
   }
 
   @media screen and (max-width: 979px) {
+    display: block;
+
     &__image {
       width: 100%;
+      height: auto;
     }
 
     .box4 {
@@ -63,16 +64,7 @@
 
     // Reverse
     &.__reverse {
-      #{$this}__image {
-        margin-left: 0;
-      }
-
-      .box4 {
-        position: relative;
-        left: auto;
-        top: auto;
-        right: auto;
-      }
+      display: block;
     }
   }
   @include media-query(sp) {
