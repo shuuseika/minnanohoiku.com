@@ -61,9 +61,9 @@ $meta_description = '';
           <p class="mainimage__logo">
             <img src="<?php echo ASSETS_URL;?>/svg/logo01.svg" alt="みんなの保育 保育士派遣サービス">
           </p>
-          <h1 class="mainimage__maintext">
+          <p class="mainimage__maintext">
             あなたのキャリアを応援する、<br><strong class="mainimage__maintext-strong">信頼の保育士派遣サービス</strong>
-          </h1>
+          </p>
 
           <p class="mainimage__paragraph">
             大阪・奈良・兵庫で、あなたにぴったりの職場を見つけます
