@@ -153,7 +153,7 @@
 .typography5 {
   column-gap: 0.5rem;
 
-  font-size: 1.375em;
+  font-size: 1.125em;
   font-weight: $font-weight-medium;
   line-height: $line-height;
 
@@ -164,7 +164,7 @@
   }
 
   @include media-query(tb) {
-    font-size: 1.375em;
+    font-size: 1.125em;
   }
   @include media-query(sp) {
     font-size: 1em;
