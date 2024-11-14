@@ -49,11 +49,19 @@
       }
     }
     &-anchor {
-      text-decoration: underline;
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+
+      span {
+        text-decoration: underline;
+      }
 
       .hover &:hover,
       &.hover {
-        text-decoration: none;
+        span {
+          text-decoration: none;
+        }
       }
     }
   }

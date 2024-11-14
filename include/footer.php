@@ -6,7 +6,7 @@
 
     <ul class="footer__nav">
       <li class="footer__nav-item">
-        <a href="https://torisan-net.com/privacy/" target="_blank" class="footer__nav-anchor">プライバシーポリシー</a>
+        <a href="https://torisan-net.com/privacy/" target="_blank" class="footer__nav-anchor"><img src="<?php echo ASSETS_URL;?>/svg/link.svg"><span>プライバシーポリシー</span></a>
       </li>
     </ul>
   </div>
