@@ -32,31 +32,7 @@ $subpageflag = true; #サブページのフラグ
     <button type="button" aria-label="ナビゲーションメニュー" class="nav_toggle" id="nav_toggle"><span class="bd"></span></button>
 
     <?php # Navigation ?>
-    <nav id="navigation" class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__list-item">
-          <a href="../../#service" class="navigation__list-anchor">サービス</a>
-        </li>
-        <li class="navigation__list-item">
-          <a href="../../#area" class="navigation__list-anchor">お仕事エリア</a>
-        </li>
-        <li class="navigation__list-item">
-          <a href="../../#salary" class="navigation__list-anchor">お給与</a>
-        </li>
-        <li class="navigation__list-item">
-          <a href="../../#voice" class="navigation__list-anchor">ご利用者の声</a>
-        </li>
-        <li class="navigation__list-item">
-          <a href="../../#faq" class="navigation__list-anchor">よくあるご質問</a>
-        </li>
-        <li class="navigation__list-item">
-          <a href="../../#company" class="navigation__list-anchor">運営会社</a>
-        </li>
-        <li class="navigation__list-item">
-          <a href="../../#contact" class="btn3">お問い合わせ</a>
-        </li>
-      </ul>
-    </nav>
+      <?php include(DOCUMENT_ROOT."/include/navigation.php"); ?>
     <?php # /Navigation ?>
 
     <main>
