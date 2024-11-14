@@ -134,7 +134,8 @@ if($action === 'confirm' || $action === 'submit') {
   if($FormBuilder->inputValidater()) {
     #$sendDataBox = $FormBuilder->getParameters();
 
-    if($action === 'submit') {
+    $captchaErrorFlag = is_Bot();
+    if($action === 'submit' && !$captchaErrorFlag) {
       // ZIPアーカイブ化（ファイルアップロードがある場合）
       $zipfile = null;
 			if (!empty($files) && file_exists($uploaddir)) {
@@ -238,5 +239,40 @@ if($action === 'confirm' || $action === 'submit') {
   foreach($formNames as $name => $value) {
     $FormBuilder->setValue($value, $FormBuilder->getInputValue($value));
   }
+}
+
+/**
+ * Botチェック
+ * @return bool
+ */
+function is_Bot() {
+  # トークン存在しているかどうかを判断する
+  if (isset($_POST["g-recaptcha-response"])) {
+    # トークンを格納する
+    $recaptcha = htmlspecialchars($_POST["g-recaptcha-response"],ENT_QUOTES,'UTF-8');
+    $captcha = $recaptcha;
+
+    # シークレットキーを格納する
+    $secretKey = "6LefcH4qAAAAAHzjPZHsAKXF1m70DvfxwWj69qDW";
+
+    # シークレットキーとトークンを一緒にGoogleに送信し、返り値を格納する
+    $resp = @file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$captcha}");
+    $resp_result = json_decode($resp,true);
+
+    # 返り値が存在する かつ スコアが0.3より高ければfalseを返す
+    if ($resp_result['success'] && $resp_result['score'] > 0.3) return false;
+  }
+
+  # 画像認証の入力値が存在するかどうかを判断する
+  if (isset($_POST['captcha_code'])) {
+    # 画像認証の入力値が画像の値と比較し、同じ場合falseを返す
+    require_once(DOCUMENT_ROOT.'/aur_lib/securimage/securimage.php');
+    $securimage = new Securimage();
+    if ($securimage->check(filter_input(INPUT_POST, 'captcha_code'))) {
+      return false;
+    }
+  }
+
+  return true;
 }
 ?>

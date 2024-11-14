@@ -36,6 +36,9 @@ $meta_description = '';
     <title><?php echo $site_title; ?></title>
     <?php include(DOCUMENT_ROOT."/include/html_head1.php"); ?>
     <?php include(DOCUMENT_ROOT."/include/html_head2.php"); ?>
+
+    <?php # reCAPTCHA3 ?>
+    <script src='https://www.google.com/recaptcha/api.js?render=6LefcH4qAAAAAEyaNE8lMASYyaVClS9enfiOEwYP'></script>
   </head>
   <body class="top">
     <div id="loader" class="overlay">
@@ -382,7 +385,29 @@ $meta_description = '';
               </tr>
             </table>
 
-            <button type="submit" name='actiontype' value="submit" class="btn2--mauto">送信する</button>
+            <?php # 画像認証 ?>
+            <?php if ($captchaErrorFlag) : ?>
+            <div class="row gutters cf mt30" style="max-width: 600px; margin-left: auto; margin-bottom: 20px; margin-right: auto; border: 1px solid #ccc; padding: 1em; background-color: #ccc;">
+              <div class="col_4">
+                <img id="captcha" src="aur_lib/securimage/securimage_show.php">
+              </div>
+              <div class="col_8 sml pl10">
+                表示されているテキストを入力してください。
+                <?php
+                if (isset($_POST['captcha_code'])) {
+                  require_once(DOCUMENT_ROOT.'/aur_lib/securimage/securimage.php');
+                  $securimage = new Securimage();
+                  if (!$securimage->check(filter_input(INPUT_POST, 'captcha_code'))) {
+                    echo '<div style="color: #f00;">もう一度入力してください。</div>';
+                  }
+                }
+                ?>
+                <input type="text" name="captcha_code">
+                <button type="button" onclick="document.getElementById('captcha').src = 'aur_lib/securimage/securimage_show.php?' + Math.random(); return false;" style="width: auto; margin: 0; padding: 0; text-decoration: underline;" class="sml">画像を再生成する</button>
+              </div>
+            </div>
+            <?php endif; ?>
+            <button type="button" name='actiontype' value="submit" class="btn2--mauto" onclick="onSubmit(this);">送信する</button>
 
             <input type="hidden" name="form_token" value="<?php echo session_id();?>">
 
@@ -503,5 +528,26 @@ $meta_description = '';
 
     <?php #フォーム用のスクリプト?>
     <script src="<?php echo HOME_URL;?>/aur_lib/mailform/system/js/script.js"></script>
+
+    <?php # reCAPTCHA3 ?>
+    <script>
+    function onSubmit(element, event) {
+      var formElement = document.form1;
+      formElement.insertAdjacentHTML('beforeend', '<input type="hidden" name="actiontype" value="' + element.value + '">');
+
+      grecaptcha.ready(function() {
+      grecaptcha.execute('6LefcH4qAAAAAEyaNE8lMASYyaVClS9enfiOEwYP', {
+        action: 'mail_form'
+      })
+        .then(function(token) {
+          // console.log(token);
+          //トークン取得が成功した場合
+          formElement.insertAdjacentHTML('beforeend', '<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+          formElement.submit(); //実際にサーバーに送信
+        });
+      });
+    }
+    </script>
+    <?php # reCAPTCHA3ここまで ?>
   </body>
 </html>
