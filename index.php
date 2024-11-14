@@ -143,11 +143,11 @@ $meta_description = '';
       <?php # Area ?>
       <section id="area" class="layout-recruit" data-animation="true">
         <p class="block_content">
-          <strong class="headline1--vari2">対応エリア</strong>
+          <strong class="headline1--vari2">お仕事エリア</strong>
         </p>
         <div class="layout1 block_section_large">
           <figure class="layout1__image">
-            <?php set_img(ASSETS_URL."/img/img03@2x.jpg","対応エリア","objfit"); ?>
+            <?php set_img(ASSETS_URL."/img/img03@2x.jpg","お仕事エリア","objfit"); ?>
           </figure>
 
           <div class="box4">
@@ -209,15 +209,15 @@ $meta_description = '';
       <?php # Voice ?>
       <section id="voice" class="layout-recruit" data-animation="true">
         <p class="block_content">
-          <strong class="headline1--vari2">ご利用の方の声</strong>
+          <strong class="headline1--vari2">ご利用者の声</strong>
         </p>
         <div class="layout1 block_section_large __reverse">
           <figure class="layout1__image">
-            <?php set_img(ASSETS_URL."/img/img04@2x.jpg","ご利用の方の声","objfit"); ?>
+            <?php set_img(ASSETS_URL."/img/img04@2x.jpg","ご利用者の声","objfit"); ?>
           </figure>
 
           <div class="box4">
-            <h2 class="box4__headline">ご利用の方の声</h2>
+            <h2 class="box4__headline">ご利用者の声</h2>
 
             <p class="block_paragraph typography4">
               働く方々の体験談
