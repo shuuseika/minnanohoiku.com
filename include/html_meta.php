@@ -16,10 +16,10 @@
 <link rel="shortcut icon" href="<?php echo HOME_URL;?>/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="icon" href="<?php echo HOME_URL;?>/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="apple-touch-icon" sizes="180x180" href="<?php echo HOME_URL; ?>/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="<?php echo HOME_URL; ?>/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/png" href="<?php echo HOME_URL; ?>/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="<?php echo HOME_URL; ?>/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="<?php echo HOME_URL; ?>/manifest.json">
-<link rel="mask-icon" href="<?php echo HOME_URL; ?>/safari-pinned-tab.svg" color="#d90d0d">
+<link rel="manifest" href="<?php echo HOME_URL; ?>/site.webmanifest" />
 <meta name="theme-color" content="#ffffff">
 
 <?php #canonical&amphtml ?>
