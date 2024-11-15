@@ -23,14 +23,14 @@ $meta_description = '';
     <meta property="og:title" content="<?php echo $site_title;?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?php echo HOME_URL.'/';?>">
-    <meta property="og:image" content="<?php echo HOME_URL;?>/assets/img/fbimage.jpg">
+    <meta property="og:image" content="<?php echo HOME_URL;?>/assets/img/fbimage.png">
     <meta property="og:site_name" content="<?php echo $site_title;?>">
     <meta property="og:description" content="<?php echo $meta_description;?>">
     <?php /* Twitter設定(summary/summarylargeimage/photo/gallery/app) */ ?>
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo $site_title;?>">
     <meta name="twitter:description" content="<?php echo $meta_description;?>">
-    <meta name="twitter:image" content="<?php echo HOME_URL;?>/assets/img/fbimage.jpg">
+    <meta name="twitter:image" content="<?php echo HOME_URL;?>/assets/img/fbimage.png">
     <!-- オープングラフタグここまで -->
 
     <title><?php echo $site_title; ?></title>
