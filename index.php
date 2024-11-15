@@ -451,9 +451,7 @@ $meta_description = '';
                   大阪本社<br>
                   〒530-0028　<br class="over_lp_none">大阪府大阪市北区万歳町3-20 <br class="over_lp_none">北大阪ビルディング6階<br>
                   東京開発<br>
-                  〒101-0032　<br class="over_lp_none">東京都千代田区岩本町3-2-9 <br class="over_lp_none">滝清ビル4階<br>
-                  沖縄事務所<br>
-                  〒900-0033　<br class="over_lp_none">沖縄県那覇市久米2-3-15 <br class="over_lp_none">COI那覇ビル5階
+                  〒101-0032　<br class="over_lp_none">東京都千代田区岩本町3-2-9 <br class="over_lp_none">滝清ビル4階
                 </address>
               </li>
               <li class="list-point__item">
