@@ -410,7 +410,6 @@ $meta_description = '';
             <button type="button" name='actiontype' value="submit" class="btn2--mauto" onclick="onSubmit(this);">送信する</button>
 
             <input type="hidden" name="form_token" value="<?php echo session_id();?>">
-
           </form>
         </div>
       </section>
@@ -428,7 +427,7 @@ $meta_description = '';
           <div class="box3__detail">
             <ol class="list-point">
               <li class="list-point__item">
-                <span class="list-point__head">派遣給与</span>
+                <span class="list-point__head">会社名</span>
                 <span class="list-point__content">
                   株式会社 トリサン　Torisan Co., Ltd.
                 </span>
@@ -450,7 +449,7 @@ $meta_description = '';
                 <address class="list-point__content">
                   大阪本社<br>
                   〒530-0028　<br class="over_lp_none">大阪府大阪市北区万歳町3-20 <br class="over_lp_none">北大阪ビルディング6階<br>
-                  東京開発<br>
+                  東京支店<br>
                   〒101-0032　<br class="over_lp_none">東京都千代田区岩本町3-2-9 <br class="over_lp_none">滝清ビル4階
                 </address>
               </li>
